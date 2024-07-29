@@ -40,6 +40,10 @@ p_share_encode.add_argument(
 p_share_encode.set_defaults(func=lambda args: encode_sharedata(base_url=args.base_url))
 
 
-if __name__ == "__main__":
+def main():
     args = p.parse_args()
     args.func(args)
+
+
+if __name__ == "__main__":
+    main()
