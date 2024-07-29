@@ -2,10 +2,12 @@
 
 # terriajs-scripts
 
+Scripts for working with [terriajs](https://github.com/TerriaJS/terriajs) catalog files.
+
 ## Installing
 
 ```
-python3 -m pip install .
+python3 -m pip install git+https://github.com/ykiu/terriajs-scripts.git
 ```
 
 ## Usage
@@ -37,6 +39,22 @@ example:
 options:
   -h, --help           show this help message and exit
   --base-url BASE_URL  The URL onto which to attach the share fragment. e.g. https://pss-terria.com
+```
+
+### `tjs gzip [-h] source destination`
+
+```
+Gzipping directory contents.
+
+example:
+  $ tjs gzip path/to/source/directory path/to/destination/directory
+
+positional arguments:
+  source       The source directory.
+  destination  The destination directory.
+
+options:
+  -h, --help   show this help message and exit
 ```
 
 ## Development
