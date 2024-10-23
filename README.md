@@ -12,7 +12,7 @@ python3 -m pip install git+https://github.com/ykiu/terriajs-scripts.git
 
 ## Usage
 
-### `tjs share decode [-h]`
+### `tjs share decode [-h] [--username USERNAME] [--password PASSWORD]`
 
 ```
 Decodes a share URL into JSON. Reads from stdin and writes to stdout. 
@@ -22,7 +22,9 @@ example:
   {"initSources": {...}}
 
 options:
-  -h, --help  show this help message and exit
+  -h, --help           show this help message and exit
+  --username USERNAME  Baisc authentication username
+  --password PASSWORD  Baisc authentication password
 ```
 
 ### `tjs share encode [-h] [--base-url BASE_URL]`
@@ -38,7 +40,8 @@ example:
 
 options:
   -h, --help           show this help message and exit
-  --base-url BASE_URL  The URL onto which to attach the share fragment. e.g. https://pss-terria.com
+  --base-url BASE_URL  The URL onto which to attach the share fragment. e.g. https://pss-
+                       terria.com
 ```
 
 ### `tjs gzip [-h] source destination`

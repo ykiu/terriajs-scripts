@@ -21,7 +21,11 @@ p_share_decode = p_share_sub.add_parser(
     '  {"initSources": {...}}',
     formatter_class=RawDescriptionHelpFormatter,
 )
-p_share_decode.set_defaults(func=lambda _: decode_sharedata())
+p_share_decode.add_argument("--username", help="Baisc authentication username")
+p_share_decode.add_argument("--password", help="Baisc authentication password")
+p_share_decode.set_defaults(
+    func=lambda args: decode_sharedata(username=args.username, password=args.password)
+)
 p_share_encode = p_share_sub.add_parser(
     "encode",
     help="Encodes a catalog item/init source/share data into a URL.",
